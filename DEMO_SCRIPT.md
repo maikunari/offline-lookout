@@ -7,8 +7,10 @@ sample messages is fictional.
 ## Setup before recording
 
 1. Open the deployed PWA once while online so the service worker caches the
-   app, the ONNX model and the wasm runtime. Wait for the badge to read
-   `0 network requests since ready · online · cached`.
+   app, the ONNX model and the wasm runtime. The first-load ring shows the real
+   bytes arriving and ends on `Ready · works offline`; the header badge then
+   reads `0 requests · offline-ready` on a phone (`0 network requests since
+   ready · online · cached` at desktop width).
 2. Install it to the home screen (Android: "Add to Home screen").
 3. Close the app. Turn on **airplane mode**. Confirm the status bar shows it.
 4. Have the three sample texts ready in a notes app or the Messages app:
@@ -21,8 +23,8 @@ sample messages is fictional.
 | # | Time | Shot | What to say (voice-over or caption) |
 |---|------|------|-------------------------------------|
 | 1 | 0:00-0:08 | Status bar with airplane mode on, then open Offline Lookout from the home screen. | "Airplane mode is on. Offline Lookout is a scam-text detector that runs entirely on the phone." |
-| 2 | 0:08-0:20 | Badge in the header: `0 network requests since ready · offline · cached`. | "The model is a 33-million-parameter MiniLM, fine-tuned and quantised to 33 MB of int8 ONNX. It never calls a server." |
-| 3 | 0:20-0:45 | Select the parcel-fee text in Messages, tap Share, choose Lookout (or paste it). Verdict card turns red, around 97%. Scroll to the highlighted words. | "A fake parcel-fee text. Red, 97% scam. The highlighted words are an on-device occlusion test: remove 'fee', 'pay now', the link, and the score drops. The chips are plain rules: link, lookalike domain, money, urgency." |
+| 2 | 0:08-0:20 | Badge in the header: `0 requests · offline-ready`. | "The model is a 33-million-parameter MiniLM, fine-tuned and quantised to 33 MB of int8 ONNX. It never calls a server." |
+| 3 | 0:20-0:45 | Select the parcel-fee text in Messages, tap Share, choose Lookout (or paste it). The message is scanned, the highlights sweep in, the strip fills and the number counts up, then the red LIKELY A SCAM lands (around 97%). | "A fake parcel-fee text. Red, 97% scam. The highlighted words are an on-device occlusion test: remove 'fee', 'pay now', the link, and the score drops. The chips are plain rules: link, lookalike domain, money, urgency." |
 | 4 | 0:45-0:58 | Read the "What to do" tips. | "It tells you what to do: don't pay, check the courier's official app." |
 | 5 | 0:58-1:12 | Paste the OTP text. Card turns green. | "A real one-time passcode: green. Codes and numbers alone don't trigger it. That false-positive rate is measured on a hard-negative set." |
 | 6 | 1:12-1:30 | Paste the "hi mum" text. Card turns red; scam type reads Impersonation. | "'Hi mum, new number.' No link, no money, still red: impersonation. The advice: call the old number." |

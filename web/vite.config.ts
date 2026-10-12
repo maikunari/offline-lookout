@@ -1,11 +1,25 @@
+import { statSync } from "node:fs";
+import { createRequire } from "node:module";
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
 // GitHub Pages serves project sites under /<repo>/. Override with VITE_BASE=/ for local preview.
 const base = process.env.VITE_BASE ?? "/offline-lookout/";
 
+// Real sizes of the assets the app streams on first load, so the progress ring is
+// bytes received over bytes expected rather than a guess or a timer.
+const require = createRequire(import.meta.url);
+const here = (p: string) => fileURLToPath(new URL(p, import.meta.url));
+const ASSET_BYTES = {
+  wasm: statSync(require.resolve("onnxruntime-web/ort-wasm-simd-threaded.wasm")).size,
+  model: statSync(here("./public/model/model_int8.onnx")).size,
+  vocab: statSync(here("./public/model/vocab.txt")).size,
+};
+
 export default defineConfig({
   base,
+  define: { __ASSET_BYTES__: JSON.stringify(ASSET_BYTES) },
   build: {
     target: "es2022",
     sourcemap: false,
