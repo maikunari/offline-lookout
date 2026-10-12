@@ -1,0 +1,59 @@
+{
+  "base_model": "microsoft/MiniLM-L12-H384-uncased",
+  "model_type": "bert",
+  "labels": [
+    "ham",
+    "scam"
+  ],
+  "scam_types": [
+    "none",
+    "delivery",
+    "banking",
+    "prize",
+    "impersonation",
+    "government",
+    "account"
+  ],
+  "temperature": 1.1,
+  "max_seq_len": 128,
+  "parameters": 33215625,
+  "best_epoch": 2,
+  "val_f1": 0.9608938547486033,
+  "val_auc": 0.9919191919191919,
+  "train_args": {
+    "base": "microsoft/MiniLM-L12-H384-uncased",
+    "out": "checkpoints/minilm",
+    "epochs": 4,
+    "batch_size": 32,
+    "lr": 5e-05,
+    "type_loss_weight": 0.5,
+    "max_len": 128,
+    "exclude_source": [],
+    "oversample": [
+      "modern_train:6"
+    ],
+    "scam_weight_cap": 1.5,
+    "threads": 8,
+    "seed": 42
+  },
+  "seed": 42,
+  "onnx_opset": 17,
+  "quantization": "dynamic int8 (Optimum ORTQuantizer, avx512_vnni config, per_channel)",
+  "size_bytes": {
+    "fp32": 133067087,
+    "int8": 34034380
+  },
+  "logit_parity_max_abs_diff": {
+    "fp32": 1.1920928955078125e-06,
+    "int8": 0.03711509704589844
+  },
+  "inputs": [
+    "input_ids",
+    "attention_mask",
+    "token_type_ids"
+  ],
+  "outputs": [
+    "logits",
+    "type_logits"
+  ]
+}
