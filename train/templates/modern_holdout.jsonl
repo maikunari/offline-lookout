@@ -1,0 +1,300 @@
+{"text": "PostLink: your parcel could not be delivered due to an unpaid customs fee of $2.99. Pay now to avoid return: https://postlink-redeliver.example/p/48213", "label": "scam", "type": "delivery"}
+{"text": "Your package is on hold at our depot. A redelivery fee of £1.45 is required. Schedule here: parcelpro-track.example/a9f2", "label": "scam", "type": "delivery"}
+{"text": "ParcelPro - We missed you today! Reschedule your delivery within 12 hours or the item will be returned to sender: http://ppro-reschedule.example", "label": "scam", "type": "delivery"}
+{"text": "Delivery attempt failed: address incomplete. Update your details and pay the 1.99 handling charge at https://delivery-update.example/track", "label": "scam", "type": "delivery"}
+{"text": "Your shipment #PL-77120 has arrived at the local facility but shipping charges are outstanding. Settle 3.50 USD here: bit.ly/3xParcel", "label": "scam", "type": "delivery"}
+{"text": "[Post Office] Pkg held: customs duty unpaid. Confirm payment in 24h to release -> https://post-customs-pay.example", "label": "scam", "type": "delivery"}
+{"text": "Hello, your parcel is waiting. Due to a missing house number we need you to confirm your address: tinyurl.example/pkg-confirm", "label": "scam", "type": "delivery"}
+{"text": "PostLink Notice: 2nd delivery attempt failed. Final notice before return. Pay re-delivery fee $1.15: https://postlink.example-redelivery.top", "label": "scam", "type": "delivery"}
+{"text": "ur package has a problem with the shipping address, pls update it in the link so we can deliver tmrw: https://pkg-fix.example/u/9921", "label": "scam", "type": "delivery"}
+{"text": "Courier update: the item you ordered cannot be released without a $0.99 verification payment. Verify card: http://courier-verify.example", "label": "scam", "type": "delivery"}
+{"text": "FINAL REMINDER: Parcel PL883 will be destroyed in 48 hours unless storage fees are paid. https://parcel-storage-fee.example", "label": "scam", "type": "delivery"}
+{"text": "Your ParcelPro package is pending. Shipping label damaged. Reprint & confirm: parcelpro-label.example/re", "label": "scam", "type": "delivery"}
+{"text": "We tried to deliver your parcel but no one was home. To rebook, confirm your postcode and pay £2.30 at https://rebook-parcel.example", "label": "scam", "type": "delivery"}
+{"text": "Customs clearance required. Your international parcel is subject to a duty of 4.20. Pay via secure portal: https://customs-duty-pay.example/i/55", "label": "scam", "type": "delivery"}
+{"text": "PostLink: tracking 6P33A9 stopped. Reason: insufficient postage. Pay difference of $1.60 to continue: postlink-postage.example", "label": "scam", "type": "delivery"}
+{"text": "Delivery notice - a package addressed to you is waiting at our hub. Claim it before 6pm today: https://hub-claim.example/8812", "label": "scam", "type": "delivery"}
+{"text": "Hi, this is your driver. I can't find your address, can you confirm it here so I don't have to take the parcel back: http://drvr-confirm.example", "label": "scam", "type": "delivery"}
+{"text": "Important: your package is being held for a small customs fee (1.25). Avoid return shipping fees by paying today: https://pkg-customs.example", "label": "scam", "type": "delivery"}
+{"text": "ShopMart order delayed. Carrier requires address verification to release the package: https://shopmart-carrier.example/verify", "label": "scam", "type": "delivery"}
+{"text": "Your parcel from overseas needs a VAT payment of 2.75 before release. Pay in the next 24 hrs: https://vat-release.example/c/3301", "label": "scam", "type": "delivery"}
+{"text": "ParcelPro: Payment of delivery charges failed. Retry here to avoid cancellation of your shipment http://ppro-pay.example", "label": "scam", "type": "delivery"}
+{"text": "A parcel is waiting for you, but the shipping cost was not fully covered. Pay 0.80 now: postlink-fee.example/s/1121", "label": "scam", "type": "delivery"}
+{"text": "Pkg #44101: redelivery can be scheduled online only. Enter your card to secure a slot: https://schedule-slot.example", "label": "scam", "type": "delivery"}
+{"text": "Dear customer, your package was returned to our warehouse. Please re-enter your address and pay a re-send fee: https://resend-now.example", "label": "scam", "type": "delivery"}
+{"text": "PostLink alert: your parcel is 1 payment away from delivery. Complete the $1.99 step here -> https://plink.example/1step", "label": "scam", "type": "delivery"}
+{"text": "Courier: the delivery of your order has been suspended due to an incorrect zip code. Correct it: http://zip-correct.example/t/88", "label": "scam", "type": "delivery"}
+{"text": "Your item has arrived in the country. Customs requires identity verification. Upload ID + pay fee: https://id-customs.example", "label": "scam", "type": "delivery"}
+{"text": "We could not deliver your package today. Delivery will be reattempted after you confirm a 1.50 fee: parcel-reattempt.example", "label": "scam", "type": "delivery"}
+{"text": "Last chance! Parcel PL-0931 will be sent back tomorrow. Pay the outstanding 2.10 handling fee tonight: https://handling-fee.example", "label": "scam", "type": "delivery"}
+{"text": "Package notification: tax of £1.99 unpaid. Click to pay and choose a delivery date https://pkg-tax.example/d/2026", "label": "scam", "type": "delivery"}
+{"text": "Nordbank: A payment of $489.00 to ELECTRO WORLD was attempted from your card. If this was NOT you, cancel here: https://nordbank-secure.example/cancel", "label": "scam", "type": "banking"}
+{"text": "FirstTrust Alert: Your card has been temporarily frozen due to suspicious activity. Verify your identity to unlock: firsttrust-verify.example", "label": "scam", "type": "banking"}
+{"text": "Your account will be suspended in 24 hours. A new device logged in from another country. Secure your account now: https://secure-login-bank.example", "label": "scam", "type": "banking"}
+{"text": "PayWave: You sent $350.00 to an unknown recipient. Not you? Dispute within 30 minutes: http://paywave-dispute.example", "label": "scam", "type": "banking"}
+{"text": "Dear client, we have detected an unauthorised transaction. Please confirm your card number and PIN at https://card-confirm.example to stop it.", "label": "scam", "type": "banking"}
+{"text": "NORDBANK: your online banking access has been locked. Call 0800 555 0199 immediately to restore access.", "label": "scam", "type": "banking"}
+{"text": "Fraud team: did you authorise a payment of £1,200 to a crypto exchange? Reply YES or NO. If NO, visit https://nb-fraud.example", "label": "scam", "type": "banking"}
+{"text": "Your debit card ending 4412 has been used at an ATM abroad. If not you, freeze it instantly: firsttrust-freeze.example/4412", "label": "scam", "type": "banking"}
+{"text": "Action required: your bank security certificate expires today. Re-register your device to keep using mobile banking: https://bank-device.example", "label": "scam", "type": "banking"}
+{"text": "FirstTrust: a new payee 'J Smith' was added to your account. If this wasn't you call 555-010-0144 now.", "label": "scam", "type": "banking"}
+{"text": "Payment declined. Your card details need re-verification before your next purchase. Update here: http://card-reverify.example", "label": "scam", "type": "banking"}
+{"text": "Nordbank Security: we blocked a login attempt from Lagos. Confirm it was you: https://nordbank-login-check.example otherwise your account stays locked.", "label": "scam", "type": "banking"}
+{"text": "Your PayWave wallet is restricted. Complete KYC verification within 12 hours to avoid permanent closure: paywave-kyc.example", "label": "scam", "type": "banking"}
+{"text": "ALERT: $2,000 wire transfer scheduled from your account at 5pm. To cancel, log in via https://wire-cancel.example immediately.", "label": "scam", "type": "banking"}
+{"text": "We noticed your card was used for a $79.99 subscription. If you did not authorise this charge, click to refund: http://refund-charge.example", "label": "scam", "type": "banking"}
+{"text": "FirstTrust Bank: your account statement is ready but requires identity confirmation. View statement: https://ft-statement.example", "label": "scam", "type": "banking"}
+{"text": "Urgent - your overdraft has been exceeded and fees apply. Avoid charges by verifying your account details: https://od-verify.example", "label": "scam", "type": "banking"}
+{"text": "Card services: Your contactless limit was changed. If you didn't request this, reverse it here https://limit-reverse.example", "label": "scam", "type": "banking"}
+{"text": "Nordbank: Due to new regulations you must update your personal data by tonight or your card will be deactivated. https://nb-update.example", "label": "scam", "type": "banking"}
+{"text": "A refund of 112.40 is pending to your account. Confirm your banking login to receive it: https://pending-refund.example", "label": "scam", "type": "banking"}
+{"text": "Unusual sign-in detected on your banking app. If this was not you, your funds are at risk. Move them to a safe account: call 0800 555 0177.", "label": "scam", "type": "banking"}
+{"text": "FirstTrust: your mobile banking will stop working on the old app version. Install the security update: http://ft-app-update.example", "label": "scam", "type": "banking"}
+{"text": "Transaction alert: 1 x payment to GAME STORE 149.00 approved. To report fraud reply HELP or go to https://report-txn.example", "label": "scam", "type": "banking"}
+{"text": "Your account has been credited incorrectly. Please return the amount by following the instructions here: paywave-return.example", "label": "scam", "type": "banking"}
+{"text": "Nordbank: Your Direct Debit to TeleNet failed. Update your card now to avoid a 25.00 charge: https://dd-update.example", "label": "scam", "type": "banking"}
+{"text": "Security notice: your bank account is linked to a suspicious device. Remove it here within 2 hours: https://remove-device.example", "label": "scam", "type": "banking"}
+{"text": "We were unable to process your loan repayment. To avoid penalty interest, confirm your card: http://loan-repay.example", "label": "scam", "type": "banking"}
+{"text": "FirstTrust: for your protection, online payments are paused. Reactivate with a quick identity check: https://reactivate-ft.example", "label": "scam", "type": "banking"}
+{"text": "Someone tried to change the phone number on your bank account. If it wasn't you, block the request: https://block-change.example", "label": "scam", "type": "banking"}
+{"text": "Important: your card will be cancelled tomorrow unless you confirm your recent transactions at https://confirm-txns.example", "label": "scam", "type": "banking"}
+{"text": "Congratulations! You have been selected to receive a $1000 ShopMart gift card. Claim within 24h: https://shopmart-reward.example/claim", "label": "scam", "type": "prize"}
+{"text": "You WON! Your number was picked in our monthly draw for a brand new phone. Confirm shipping details: http://win-phone.example", "label": "scam", "type": "prize"}
+{"text": "TeleNet loyalty: you have 2,450 unclaimed reward points expiring tonight! Redeem now: telenet-points.example/redeem", "label": "scam", "type": "prize"}
+{"text": "Hey! I'm giving away $500 to the first 50 people who reply. Just cover the $10 transfer fee. Reply YES!", "label": "scam", "type": "prize"}
+{"text": "Lucky day! You are our 1,000,000th visitor and have won a free holiday for two. Claim: https://free-holiday.example", "label": "scam", "type": "prize"}
+{"text": "Your name came up in the StreamFlix anniversary giveaway: 1 year free + a 4K TV. Verify eligibility: http://sflix-giveaway.example", "label": "scam", "type": "prize"}
+{"text": "FREE $250 fuel voucher for the first 100 drivers today. Tap to claim before they run out >> fuel-voucher.example", "label": "scam", "type": "prize"}
+{"text": "Congrats, you qualify for a cash prize of 5,000 from the Global Lottery Commission. Send your full name and address to claim.", "label": "scam", "type": "prize"}
+{"text": "You have a pending reward of $120 from completing our survey. It expires in 2 hours. Collect: https://survey-cash.example", "label": "scam", "type": "prize"}
+{"text": "ShopMart: Thanks for being a customer! Spin the wheel for a guaranteed prize worth up to $1,500: http://spin-win.example", "label": "scam", "type": "prize"}
+{"text": "WINNER notification: your mobile number has won 850,000 in the International Mobile Draw. Ref: IMD/2026/77. Contact claims agent on 07700 900412.", "label": "scam", "type": "prize"}
+{"text": "Earn $300-$800 a day working from home, no experience needed. We saw your resume. Reply START to begin today!", "label": "scam", "type": "prize"}
+{"text": "Hi! I'm a recruiter. We have a part-time online job paying 50-200 USD per task. Interested? Message me on WhatsApp: +1 555 010 0188", "label": "scam", "type": "prize"}
+{"text": "Your cashback of 84.00 is ready! Enter your card details to receive it instantly: https://cashback-now.example", "label": "scam", "type": "prize"}
+{"text": "Limited offer: get a free gaming console for testing and keeping it. Only pay shipping: http://console-tester.example", "label": "scam", "type": "prize"}
+{"text": "Dear user, you have been chosen for a government-backed solar grant worth 7,500. Apply here before it closes: solar-grant.example", "label": "scam", "type": "prize"}
+{"text": "Invest 200 today and get 2,000 back in 7 days. Guaranteed. Our AI trading bot never loses. DM for proof!", "label": "scam", "type": "prize"}
+{"text": "Make $5k/week with crypto. Totally passive. I made 34k last month. Join my VIP group: https://vip-crypto.example", "label": "scam", "type": "prize"}
+{"text": "Compensation alert: you are owed 2,300 from a class action you didn't know about. Claim your share: https://claim-share.example", "label": "scam", "type": "prize"}
+{"text": "Exclusive: You've been pre-approved for a $0 fee credit card with a 1,000 welcome bonus. Accept in 24h: http://preapproved.example", "label": "scam", "type": "prize"}
+{"text": "StreamFlix is giving loyal viewers 6 months free. You qualify! Confirm your account: https://sflix-free.example", "label": "scam", "type": "prize"}
+{"text": "2nd notice: your prize of a 500 shopping voucher remains unclaimed. Last chance to claim: tinyurl.example/voucher500", "label": "scam", "type": "prize"}
+{"text": "You've received a mystery gift box from a secret admirer! Pay 2.99 delivery to find out what's inside: http://mystery-box.example", "label": "scam", "type": "prize"}
+{"text": "Good news! Your loan of 15,000 has been approved with no credit check. Pay the 150 processing fee to release funds.", "label": "scam", "type": "prize"}
+{"text": "Flash giveaway: reply WIN to this number and get a 100 gift card. Standard fee of 4.50 per message applies.", "label": "scam", "type": "prize"}
+{"text": "Unclaimed inheritance: a distant relative left you 1.2M. Our law firm needs 350 for document processing. Reply for details.", "label": "scam", "type": "prize"}
+{"text": "TeleNet: your data plan was selected for a free upgrade to unlimited! Activate within 1 hour: https://telenet-upgrade.example", "label": "scam", "type": "prize"}
+{"text": "Get paid 25 for every parcel you forward from home. Easy work, weekly pay. Sign up: https://parcel-jobs.example", "label": "scam", "type": "prize"}
+{"text": "Woohoo! Your ShopMart account has been credited with a 300 bonus. Login to spend it before midnight: shopmart-bonus.example", "label": "scam", "type": "prize"}
+{"text": "You're a winner! Claim your free trip to Bali - just confirm your card for the 1.00 verification: https://bali-trip.example", "label": "scam", "type": "prize"}
+{"text": "Hi mum, I dropped my phone in the sink and this is my new number. Can you save it and message me back? x", "label": "scam", "type": "impersonation"}
+{"text": "Hey dad it's me, my phone broke so I'm using a friend's. I need to pay a bill today but can't log into my bank. Can you send 450? I'll pay you back Friday", "label": "scam", "type": "impersonation"}
+{"text": "Mum its me, new number. Lost my phone. Can you transfer 300 to this account its urgent, will explain later. Sort code 00-00-00 acc 12345678", "label": "scam", "type": "impersonation"}
+{"text": "Hi, this is your son. I'm in trouble and can't talk right now. Please don't call. Can you buy 3 gift cards of 100 each and send me the codes?", "label": "scam", "type": "impersonation"}
+{"text": "Hey are you available? I'm in a meeting and need you to handle something urgently. Reply ASAP. - Mark (CEO)", "label": "scam", "type": "impersonation"}
+{"text": "It's Sarah from HR. We're updating payroll today. Please send your bank details and a photo of your ID before 3pm so your salary isn't delayed.", "label": "scam", "type": "impersonation"}
+{"text": "Hi it's your boss, I need you to purchase some gift cards for a client urgently, I'll reimburse you. Keep this between us for now.", "label": "scam", "type": "impersonation"}
+{"text": "Hello, is this Jenny? Sorry, wrong number I think. You seem nice though, how is your day going?", "label": "scam", "type": "impersonation"}
+{"text": "Hi, I'm Lisa, we met at the conference last year? I've been doing really well with gold trading, I could show you how if you like.", "label": "scam", "type": "impersonation"}
+{"text": "Grandma, it's me. I was in a car accident and I'm at the police station. I need 2,000 for bail. Please don't tell mum. Send via gift card.", "label": "scam", "type": "impersonation"}
+{"text": "hi its me ur daughter. phone got stolen, im on a mates phone. can u whatsapp me on this number pls x", "label": "scam", "type": "impersonation"}
+{"text": "Hey, it's Tom. My card got blocked and my rent is due today. Could you send 600 to my landlord? I'll send you the details.", "label": "scam", "type": "impersonation"}
+{"text": "This is Officer Daniels. Your nephew has been arrested and needs legal fees paid immediately. Call 555-010-0162 to arrange payment.", "label": "scam", "type": "impersonation"}
+{"text": "Hi Mum, I've changed numbers. Can you delete the old one? Also I need a favour, are you around?", "label": "scam", "type": "impersonation"}
+{"text": "Dad I'm so embarrassed, I've been in a bit of an accident. I'm okay but I need to pay the other driver 900 today to avoid police. Please help", "label": "scam", "type": "impersonation"}
+{"text": "Hi, I'm from your IT department. We detected malware on your work laptop. Share your login so we can clean it remotely.", "label": "scam", "type": "impersonation"}
+{"text": "Hey babe, I miss you. My internet is going to be cut off and I can't video call unless I pay 150. Could you send it to me?", "label": "scam", "type": "impersonation"}
+{"text": "Hello, this is David from the hospital. Your relative has been admitted. We need a deposit of 1,500 before treatment can continue. Call us back on 07700 900876.", "label": "scam", "type": "impersonation"}
+{"text": "Hi its me, I'm using a temp number. Did you get my last message? I need help with a payment, my banking app is locked for 48h.", "label": "scam", "type": "impersonation"}
+{"text": "Good afternoon. This is Ms. Chen from your accounts department. The vendor's bank details have changed. Please pay the attached invoice to the new account today.", "label": "scam", "type": "impersonation"}
+{"text": "Mom, I'm texting from a friend's phone. Mine won't turn on. Can you send me money for a new one? 700 should cover it. Love you", "label": "scam", "type": "impersonation"}
+{"text": "Hey, it's Chris from upstairs. Locked out and my phone's dead, borrowed this one. Can you transfer me 80 for a locksmith? Will drop cash round later.", "label": "scam", "type": "impersonation"}
+{"text": "Hi this is your delivery driver Alex. I'm outside but the app crashed. Can you send me 5 by bank transfer for the parking so I can bring the parcel up?", "label": "scam", "type": "impersonation"}
+{"text": "Is this Mr. Patel? This is Angela, your new account manager. We've noticed irregularities. Please confirm your date of birth and account number.", "label": "scam", "type": "impersonation"}
+{"text": "Hi love, it's me. Can't talk, in a meeting all day. Can you pay this invoice for me, it's overdue and they're threatening to cancel: https://inv-pay.example/7731", "label": "scam", "type": "impersonation"}
+{"text": "Hey its ur cousin, long time! Random question, do u use PayWave? I need to receive some money and my account is limited.", "label": "scam", "type": "impersonation"}
+{"text": "Hi Mum. New phone, new number, same me lol. Message me on here from now on. Also could you help me with something quickly? xx", "label": "scam", "type": "impersonation"}
+{"text": "This is the Fraud Department at your bank. We are investigating your branch staff. Please transfer your savings to the safe account we provide and tell no one.", "label": "scam", "type": "impersonation"}
+{"text": "Hello dear, I am a soldier deployed overseas. I found your number by chance. I would love to get to know you. Can we chat?", "label": "scam", "type": "impersonation"}
+{"text": "Hey, it's James. Changed my number. Quick one - can you send me 200 until tomorrow? Bank's messing me about. Will explain later x", "label": "scam", "type": "impersonation"}
+{"text": "Tax Office: You are eligible for a tax refund of 342.18. Submit your claim before the end of the tax year: https://tax-refund-claim.example", "label": "scam", "type": "government"}
+{"text": "TollPass: You have an unpaid toll invoice of $6.90. To avoid a $50 late fee, pay by today: https://tollpass-pay.example/inv/221", "label": "scam", "type": "government"}
+{"text": "Final notice from the Vehicle Agency: your vehicle tax has lapsed. Pay immediately to avoid a 1,000 fine and clamping: vehicle-tax.example", "label": "scam", "type": "government"}
+{"text": "Revenue Service: a warrant will be issued for your arrest due to unpaid taxes. Call 555-010-0120 within 2 hours to settle.", "label": "scam", "type": "government"}
+{"text": "Your Social Benefits payment has been suspended because your details are out of date. Reactivate here: https://benefits-reactivate.example", "label": "scam", "type": "government"}
+{"text": "Parking fine notice: A penalty of 65.00 was issued to your vehicle. Pay within 7 days to receive a 50% discount: https://pcn-pay.example", "label": "scam", "type": "government"}
+{"text": "National Health: You are entitled to a free health check. Book your slot and confirm your identity: nhealth-book.example", "label": "scam", "type": "government"}
+{"text": "Court Notice: You have failed to attend jury service. A fine of 500 has been issued. Pay now to avoid prosecution: court-fine.example", "label": "scam", "type": "government"}
+{"text": "Energy Support Scheme: You qualify for a 400 energy bill rebate. Apply with your bank details here: https://energy-rebate.example", "label": "scam", "type": "government"}
+{"text": "Immigration: your visa application has an issue. Pay the outstanding 95.00 processing fee within 24 hours or it will be cancelled: https://visa-fee.example", "label": "scam", "type": "government"}
+{"text": "TollPass Reminder: your account has a negative balance from recent toll crossings. Settle $4.35 to avoid suspension of registration: tollpass-settle.example", "label": "scam", "type": "government"}
+{"text": "Tax Authority: Your tax return has been reviewed and you overpaid by 418.50. Claim your refund: http://overpaid-refund.example", "label": "scam", "type": "government"}
+{"text": "Police notice: a traffic violation was recorded on 03/10. View the evidence and pay the 120 fine: https://traffic-evidence.example", "label": "scam", "type": "government"}
+{"text": "Elections Office: your voter registration is incomplete. Confirm your details within 48h: voter-confirm.example", "label": "scam", "type": "government"}
+{"text": "Census reminder: failing to complete the census is an offence. Complete it now and avoid a 1,000 penalty: https://census-now.example", "label": "scam", "type": "government"}
+{"text": "Dept of Transport: your driving licence will be revoked due to unpaid fees. Update payment: licence-fee.example", "label": "scam", "type": "government"}
+{"text": "Your pension statement requires verification. Log in with your national ID number to continue receiving payments: https://pension-verify.example", "label": "scam", "type": "government"}
+{"text": "Toll road notice: 1 unpaid trip (2.60). Late payment penalty will apply after midnight. Pay here: https://toll-trip.example/p", "label": "scam", "type": "government"}
+{"text": "Customs & Border: A package addressed to you contained prohibited items. Contact Agent Lee on 555-010-0133 to avoid charges.", "label": "scam", "type": "government"}
+{"text": "Tax Office: Your tax code has been changed. Review the change and confirm your bank details to receive your adjustment: https://taxcode-review.example", "label": "scam", "type": "government"}
+{"text": "City Council: Your council tax payment bounced. Pay 142.00 now to avoid court action: https://council-pay.example", "label": "scam", "type": "government"}
+{"text": "Student Finance: your maintenance loan cannot be paid until you confirm your bank account: https://student-loan-confirm.example", "label": "scam", "type": "government"}
+{"text": "Winter fuel payment of 300 is waiting for you. Confirm eligibility with your date of birth and card number: winter-fuel.example", "label": "scam", "type": "government"}
+{"text": "Notice: Unpaid vehicle toll detected on 10/08. Pay $3.95 within 12 hours to avoid DMV reporting: https://dmv-toll.example", "label": "scam", "type": "government"}
+{"text": "Dear citizen, your digital ID is about to expire. Renew online in 5 minutes to keep access to government services: https://digital-id-renew.example", "label": "scam", "type": "government"}
+{"text": "Public Health: You were in contact with a confirmed case. Order a free test kit (1.99 postage): https://test-kit-order.example", "label": "scam", "type": "government"}
+{"text": "Legal notice: a lawsuit has been filed against your name. Case ID 88-2211. Call 07700 900533 to resolve before the hearing.", "label": "scam", "type": "government"}
+{"text": "Benefits Agency: Your cost-of-living payment of 650 is ready. Claim by entering your card details: https://col-payment.example", "label": "scam", "type": "government"}
+{"text": "Revenue: due to an error you have 2 outstanding tax payments. Avoid a lien on your property by paying today: https://tax-lien.example", "label": "scam", "type": "government"}
+{"text": "Motor Vehicle Dept: your plate renewal failed. Renew with a 20% late fee now or face suspension: plate-renew.example", "label": "scam", "type": "government"}
+{"text": "StreamFlix: your payment could not be processed and your membership is suspended. Update your billing info: https://sflix-billing.example", "label": "scam", "type": "account"}
+{"text": "CloudBox: your storage is full and photos will be deleted in 48 hours. Upgrade now for free: cloudbox-upgrade.example", "label": "scam", "type": "account"}
+{"text": "Your email password expires today. Keep the same password by verifying here: https://mail-keep-pass.example", "label": "scam", "type": "account"}
+{"text": "TeleNet: your SIM will be deactivated due to incomplete KYC. Update documents at http://telenet-kyc.example within 24h.", "label": "scam", "type": "account"}
+{"text": "Security alert: your Apple-style ID was used to sign in on a new device. If this wasn't you, lock your account: https://id-lock.example", "label": "scam", "type": "account"}
+{"text": "Your social media account has been reported for copyright violation. Appeal within 24 hours or it will be permanently deleted: appeal-form.example", "label": "scam", "type": "account"}
+{"text": "ShopMart: your account is on hold because of a billing problem. Reactivate: https://shopmart-hold.example", "label": "scam", "type": "account"}
+{"text": "Your mobile number will be suspended tomorrow for unpaid charges of 14.99. Pay now: https://telenet-unpaid.example", "label": "scam", "type": "account"}
+{"text": "Wi-Fi router warning: your home network is compromised. Call our support line on 555-010-0150 for immediate help.", "label": "scam", "type": "account"}
+{"text": "StreamFlix: We couldn't verify your payment method. Your account will close in 24h. Verify: sflix-verify.example", "label": "scam", "type": "account"}
+{"text": "Voicemail: you have 1 new voice message that could not be delivered to your phone. Listen here: https://vm-listen.example", "label": "scam", "type": "account"}
+{"text": "Your antivirus subscription has auto-renewed for 299.99. To cancel and refund call 0800 555 0133 within 24 hours.", "label": "scam", "type": "account"}
+{"text": "Account verification required: we noticed a login from a new browser. Confirm it was you: https://login-confirm.example", "label": "scam", "type": "account"}
+{"text": "TeleNet: your monthly bill is ready but your payment card has expired. Update now to avoid disconnection: telenet-card.example", "label": "scam", "type": "account"}
+{"text": "Your two-factor authentication has been disabled. If you did not do this, re-enable it immediately: https://2fa-reenable.example", "label": "scam", "type": "account"}
+{"text": "Hi, this is tech support. Your computer is sending error reports to our server. Let us fix it remotely: https://remote-fix.example", "label": "scam", "type": "account"}
+{"text": "Your domain name is expiring. Renew within 24 hours or lose it forever: http://domain-renew-now.example", "label": "scam", "type": "account"}
+{"text": "CloudBox: unusual sync activity detected. Someone may be accessing your files. Review activity: https://cloudbox-activity.example", "label": "scam", "type": "account"}
+{"text": "Dear customer, your online account has been flagged for suspicious activity and limited. Restore full access: https://restore-access.example", "label": "scam", "type": "account"}
+{"text": "Your music streaming account will be downgraded to free. Keep premium by confirming your card: https://keep-premium.example", "label": "scam", "type": "account"}
+{"text": "Important: your messaging app needs to be re-verified. Enter the 6-digit code we just sent you on this page: https://msg-reverify.example", "label": "scam", "type": "account"}
+{"text": "ShopMart Seller: your payout is paused. Confirm your tax information to resume payouts: shopmart-tax-info.example", "label": "scam", "type": "account"}
+{"text": "Your phone has been infected with 3 viruses! Download our cleaner app now to protect your data: https://cleaner-app.example", "label": "scam", "type": "account"}
+{"text": "Your email box is 98% full. Incoming mail will bounce. Increase your quota for free: https://mailbox-quota.example", "label": "scam", "type": "account"}
+{"text": "TeleNet: you have a 32.50 credit on your account from an overcharge. Claim it to your card: https://telenet-credit.example", "label": "scam", "type": "account"}
+{"text": "Gaming account warning: a ban appeal is required to keep your items. Submit appeal with login details: https://ban-appeal.example", "label": "scam", "type": "account"}
+{"text": "Your dating profile has 3 new matches but your membership expired. Reactivate to see who liked you: reactivate-dating.example", "label": "scam", "type": "account"}
+{"text": "Subscription renewal failed. To keep your number private, renew your plan now: https://keep-number.example", "label": "scam", "type": "account"}
+{"text": "Alert: your password was found in a data breach. Change it now via our secure portal: https://breach-reset.example", "label": "scam", "type": "account"}
+{"text": "Your workplace account will be deactivated due to inactivity. Log in within 1 hour to keep it: https://workspace-keep.example", "label": "scam", "type": "account"}
+{"text": "Your verification code is 482913. It expires in 10 minutes. Do not share this code with anyone.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "G-771209 is your sign-in code.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Use code 034522 to confirm your login. If you didn't request this, you can ignore this message.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Your one-time passcode is 918 336. Nordbank will never call you to ask for this code.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "552891 is your PayWave security code. Valid for 5 minutes.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Your ShopMart verification code: 220417", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Enter 6604 to verify your phone number for StreamFlix.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Your login code is 73 19 44. It can only be used once.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Two-factor code: 185502. Expires in 2 min.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Hi! Your confirmation code for the pharmacy portal is 449120.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Your TeleNet account PIN reset code is 7781. This code expires at 14:32.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Authentication code 309 118. Don't share it. We'll never ask for it by phone.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Your CloudBox code is 665201. Enter it to finish setting up your new device.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Transaction approval code: 4471. Use it to approve the 42.00 payment you initiated to Grocery Co.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Your password was changed successfully. If you did this, no action is needed.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Welcome to the gym app! Your activation code is 2201.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Your appointment booking code is Q7P2. Show this at reception.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Code: 118 294. Expires in 10 minutes.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Your FirstTrust mobile app registration code is 553 027. Never share this code.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Here is the one-time code you requested: 910 442", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Your new device was added to your account on 12 Oct at 09:14. If this was you, ignore this message.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "PIN for your parcel locker: 8821. Locker 14, valid until Thursday 20:00.", "label": "ham", "type": "none", "tags": ["otp", "delivery"]}
+{"text": "Your verification code is 000913", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Sign-in attempt from Chrome on Windows. Code: 377 150. Not you? Change your password in the app.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "Your meeting access code is 59 20 11. Dial-in opens 5 minutes before the start.", "label": "ham", "type": "none", "tags": ["otp"]}
+{"text": "PostLink: Your parcel PL44120981 will be delivered today between 13:00 and 15:00. No action needed.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "ParcelPro: Your package has been delivered and left in the porch. Thanks for choosing ParcelPro.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Your ShopMart order #10492 has shipped. Track it in the app or at example.com/track/10492", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Delivery update: we're running about 40 minutes late today. Your driver, Sam, will be with you by 6pm.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Your parcel is ready to collect from the corner shop on High Street. Bring ID. Open until 9pm.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Hi, it's your courier. I've left the package with your neighbour at number 12. Have a good day!", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "PostLink: Sorry we missed you. We'll try again tomorrow. No fee, nothing to do.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Your grocery delivery is 2 stops away. Please have someone available to receive it.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Order confirmed! Your pizza will arrive in about 25 minutes.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "ParcelPro: your parcel is out for delivery. Expected today by 20:00. Tracking: PP00981122", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Your return has been received and your refund of 29.99 will appear in 3-5 working days.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "The furniture delivery is booked for Saturday 8am-12pm. Reply CHANGE if you need a different slot.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Package delivered at 14:22. Photo proof available in the ParcelPro app.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Your order from the bookshop is delayed by 2 days due to weather. New estimate: Monday. Sorry about that.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "PostLink: Customs clearance complete, no charges due. Your parcel is on its way.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Hi! Your prescription is ready for pickup at the pharmacy. We're open until 7.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Driver is arriving now. Please come outside to collect your food order.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Your dry cleaning is ready. Collect any time this week, ticket 441.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "ShopMart: your item is back in stock and has been dispatched. Expect it Wednesday.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Parcel left in the safe place you chose (behind the bins). Thanks!", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Your flowers were delivered at 10:05 and signed for by J. Reyes.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Meal kit arriving Thursday. Please refrigerate within 2 hours of delivery.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Your parcel has been redirected to the pickup point you requested. It'll be there from tomorrow for 7 days.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Delivery exception: the address was inaccessible (gate locked). We'll retry tomorrow morning.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Thanks for your order! Estimated delivery 14-16 Oct. We'll text you on the day.", "label": "ham", "type": "none", "tags": ["delivery"]}
+{"text": "Nordbank: 42.00 paid to GROCERY CO using card ending 4412. Balance available in the app.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "FirstTrust: your salary of 2,450.00 has been credited to your account.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "PayWave: You received 25.00 from Alex M. 'thanks for lunch!'", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "Your direct debit to TeleNet for 34.99 will be taken on 15 Oct.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "Nordbank: Your new card has been dispatched and should arrive in 5 working days.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "Reminder: your credit card payment of 120.00 is due on 20 Oct. Pay in the app or by bank transfer as usual.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "FirstTrust: Low balance alert. Your current account balance is below 50.00.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "Your monthly statement is now available in online banking.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "PayWave: Payment of 18.50 to Cafe Luna completed.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "Nordbank will never ask you to move money to a 'safe account'. If someone does, hang up and call the number on your card.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "Your mortgage payment of 980.00 was received. Thank you.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "FirstTrust: Did you just spend 230.00 at TRAVEL CO? Reply Y to confirm or N if not you. Standard rates apply.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "Your savings account interest of 3.21 has been added.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "Card ending 9921 was declined at ONLINE STORE because of insufficient funds.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "Your scheduled transfer of 200.00 to Savings has been completed.", "label": "ham", "type": "none", "tags": ["bank"]}
+{"text": "Reminder: dentist appointment tomorrow at 10:30 with Dr. Okafor. Reply C to cancel.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Your table for 4 at Trattoria Rosa is confirmed for Friday 7:30pm.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Flight BA-style reminder: online check-in is now open for your flight tomorrow at 09:40.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Your car is due for its MOT on 2 Nov. Call the garage to book in.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "School: Year 5 trip to the museum is on Thursday. Please send a packed lunch.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Library: 2 items are due back on Monday. Renew online or in the app.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Your taxi is 3 minutes away. Silver hatchback, plate ends 2XY.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Gym class booked: Spin, Tue 6pm. See you there!", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Vet reminder: Biscuit is due for her annual vaccination this month.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Your hair appointment is confirmed for Sat 11am with Priya.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Doctor's surgery: your blood test results are back. Nothing to worry about, but please book a routine follow-up.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Parking: your session in Car Park B expires in 15 minutes.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Reminder: bins are collected tomorrow. Recycling week.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Your train at 17:12 is delayed by approx 10 minutes. Sorry for the inconvenience.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Your rental car pickup is tomorrow at 9am. Please bring your licence and the card you booked with.", "label": "ham", "type": "none", "tags": ["reminder"]}
+{"text": "Hey, can you send me the 20 quid for the tickets when you get a sec? No rush x", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Mum here, new phone finally! Same number though. Call me when you're free, want to hear about the interview.", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "URGENT: can you pick up Ellie from school at 3? I'm stuck in traffic. Sorry!!", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "I transferred you the 150 for the hotel. Let me know if it came through.", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Running late, be there in 10. Order me a flat white?", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Happy birthday!!! Hope you have a brilliant day. Drinks on me this weekend.", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Dad, the plumber says it'll be 300 to fix the boiler. Should I tell him to go ahead?", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Can you check if I left my wallet at yours? Can't find it anywhere.", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Hi love, landed safely. Will call once I'm through passport control. x", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Here's the link to the photos from Saturday: example.com/album/sat-bbq", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Lost my phone last night, this is my temporary number. It's Jo btw. Pub quiz still on for Thursday?", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Could you lend me 50 till payday? Car insurance came out early. Will send it back on the 28th.", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Don't forget it's Grandma's 80th on Sunday. We're all chipping in 30 each for the present.", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Boss wants the report by 5. Can you send me the latest numbers asap?", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Won the pub quiz!! 40 quid prize, drinks are on us next week", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Did you see the parcel I left on your doorstep? It's the charger you asked for.", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "I'm at the bank now sorting out the joint account. They need your signature too, can you pop in tomorrow?", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Meeting moved to 2pm, room 4. Bring the contract printouts.", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Hey it's Sam from the climbing gym, you left your shoes here! We're open till 10.", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "Thanks so much for the lift yesterday, you're a star. Coffee's on me x", "label": "ham", "type": "none", "tags": ["personal"]}
+{"text": "TeleNet: You've used 80% of your monthly data. Your allowance resets on the 22nd.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "StreamFlix: New episodes of your favourite show are available now.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Power outage in your area. Engineers are on site. Estimated restoration: 16:30. Sorry for the disruption.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Your electricity meter reading is due. Submit it in the app any time this week.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Weather warning: heavy rain expected tonight. Avoid travel if possible.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "CloudBox: your weekly backup completed successfully. 1,204 files protected.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Your TeleNet bill of 34.99 is ready. It will be paid by direct debit on the 15th as usual.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Water supply will be interrupted on Tuesday 10am-2pm for planned maintenance.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Thanks for visiting Cafe Luna! Rate your experience from 1 to 5 by replying to this message.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Your subscription to the newspaper app renews on 1 Nov at the same price. Manage it in your account settings.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Gym: we're closing early on Friday (8pm) for maintenance.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "ShopMart: your 10% loyalty discount has been applied to your account. It shows automatically at checkout.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Your appointment with the bank advisor is confirmed for Wed 2pm at the Market Street branch.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Software update complete. Your phone restarted successfully.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Council: your garden waste collection restarts next week. Put your brown bin out on Tuesday.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Your energy bill for September is 88.20. View the breakdown in the app.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "TeleNet: roaming activated. Standard rates apply in the EU, no extra charge.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Your voicemail is full. Delete old messages to receive new ones.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Your tax return has been received. No further action is needed unless we contact you by post.", "label": "ham", "type": "none", "tags": ["service"]}
+{"text": "Toll road: your trip on 10 Oct was charged 2.60 to your registered card. Receipt in your account.", "label": "ham", "type": "none", "tags": ["service"]}

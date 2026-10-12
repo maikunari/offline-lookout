@@ -1,0 +1,12 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.3
+transformers>=4.44
+optimum[onnxruntime]>=1.21
+onnxruntime>=1.18
+onnx
+scikit-learn>=1.4
+pandas>=2.0
+numpy
+requests
+tqdm
+accelerate>=0.30
