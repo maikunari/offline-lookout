@@ -34,5 +34,5 @@ sample messages is fictional.
 
 - If the Share sheet doesn't list Lookout, the PWA wasn't installed from the
   deployed origin; fall back to copy-paste. The shot still works.
-- Keep the phone in light or dark mode throughout; the app follows the system.
+- The app is dark only; the phone's light/dark setting does not change it.
 - Fill in the bracketed numbers in shot 8 from the eval table in `README.md`.

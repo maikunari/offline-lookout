@@ -18,11 +18,11 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       injectRegister: "auto",
-      includeAssets: ["icons/*.png", "icons/*.svg", "model/*"],
+      includeAssets: ["icons/*.png", "icons/*.svg", "fonts/*.woff2", "model/*"],
       workbox: {
         // The int8 model (~33 MB) and the ORT wasm runtime are precached so the
         // app is fully functional with the network off.
-        globPatterns: ["**/*.{js,css,html,svg,png,wasm,mjs,onnx,json,txt,ico}"],
+        globPatterns: ["**/*.{js,css,html,svg,png,woff2,wasm,mjs,onnx,json,txt,ico}"],
         maximumFileSizeToCacheInBytes: 80 * 1024 * 1024,
         navigateFallback: `${base}index.html`,
         cleanupOutdatedCaches: true,
@@ -34,11 +34,12 @@ export default defineConfig({
         start_url: base,
         scope: base,
         display: "standalone",
-        background_color: "#0f1419",
-        theme_color: "#0f1419",
+        background_color: "#0a0d13",
+        theme_color: "#0a0d13",
         icons: [
           { src: "icons/icon-192.png", sizes: "192x192", type: "image/png" },
-          { src: "icons/icon-512.png", sizes: "512x512", type: "image/png", purpose: "any maskable" },
+          { src: "icons/icon-512.png", sizes: "512x512", type: "image/png" },
+          { src: "icons/icon-512-maskable.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
         ],
         // Android: "Share" a message from another app straight into Lookout.
         share_target: {

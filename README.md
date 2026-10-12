@@ -1,5 +1,7 @@
 This project was submitted to the ryze.ai hackathon by Mike Sewell.
 
+<p><img src="web/public/icons/icon.svg" alt="Offline Lookout logo: a lamp casting a beam, drawn like a sector light on a chart" width="84" /></p>
+
 # Offline Lookout
 
 **An on-device scam-text detector.** Paste a suspicious SMS or chat message and
@@ -11,6 +13,11 @@ device, and after the first visit the app works with the network switched off.
 This is a submission to the **Ryze AI Hack: Small Models** (https://open-ryze.web.app/).
 
 ![Demo: parcel-fee scam goes red, OTP goes green, "hi mum" goes red](docs/demo.gif)
+
+<p>
+  <img src="docs/screenshot-phone.png" alt="Phone: the pasted parcel-fee text as a message bubble with highlighted words, the verdict LIKELY A SCAM, 98%, and the probability strip with the 35 and 70 thresholds" width="250" />
+  <img src="docs/screenshot-desktop.png" alt="Desktop: the same parcel-fee verdict with evidence chips and what-to-do advice" width="470" />
+</p>
 
 ## The model
 
