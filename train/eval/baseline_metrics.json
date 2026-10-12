@@ -1,0 +1,114 @@
+{
+  "model": "tfidf_word12_char25_logreg",
+  "fit_seconds": 2.1,
+  "test": {
+    "n": 586,
+    "threshold": 0.5,
+    "accuracy": 0.9897610921501706,
+    "precision": 0.9775280898876404,
+    "recall": 0.9560439560439561,
+    "f1": 0.9666666666666667,
+    "roc_auc": 0.9984459984459985,
+    "confusion": {
+      "tn": 493,
+      "fp": 2,
+      "fn": 4,
+      "tp": 87
+    },
+    "fpr": 0.00404040404040404,
+    "ece": 0.02356082612653556,
+    "recall_by_scam_type": {
+      "account": {
+        "n": 5,
+        "recall": 1.0
+      },
+      "banking": {
+        "n": 5,
+        "recall": 1.0
+      },
+      "delivery": {
+        "n": 3,
+        "recall": 1.0
+      },
+      "prize": {
+        "n": 64,
+        "recall": 0.96875
+      }
+    }
+  },
+  "holdout": {
+    "n": 300,
+    "threshold": 0.5,
+    "accuracy": 0.89,
+    "precision": 0.9152542372881356,
+    "recall": 0.9,
+    "f1": 0.907563025210084,
+    "roc_auc": 0.9451851851851851,
+    "confusion": {
+      "tn": 105,
+      "fp": 15,
+      "fn": 18,
+      "tp": 162
+    },
+    "fpr": 0.125,
+    "ece": 0.05697238849477107,
+    "hard_negative_fpr": {
+      "bank": {
+        "n": 15,
+        "fp": 3,
+        "fpr": 0.2
+      },
+      "delivery": {
+        "n": 26,
+        "fp": 1,
+        "fpr": 0.038461538461538464
+      },
+      "otp": {
+        "n": 25,
+        "fp": 1,
+        "fpr": 0.04
+      },
+      "personal": {
+        "n": 20,
+        "fp": 2,
+        "fpr": 0.1
+      },
+      "reminder": {
+        "n": 15,
+        "fp": 0,
+        "fpr": 0.0
+      },
+      "service": {
+        "n": 20,
+        "fp": 8,
+        "fpr": 0.4
+      }
+    },
+    "recall_by_scam_type": {
+      "account": {
+        "n": 30,
+        "recall": 1.0
+      },
+      "banking": {
+        "n": 30,
+        "recall": 1.0
+      },
+      "delivery": {
+        "n": 30,
+        "recall": 1.0
+      },
+      "government": {
+        "n": 30,
+        "recall": 1.0
+      },
+      "impersonation": {
+        "n": 30,
+        "recall": 0.4
+      },
+      "prize": {
+        "n": 30,
+        "recall": 1.0
+      }
+    }
+  }
+}

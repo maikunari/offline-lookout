@@ -1,0 +1,513 @@
+{
+  "tag": "minilm",
+  "base_model": "microsoft/MiniLM-L12-H384-uncased",
+  "parameters": 33215625,
+  "temperature": 1.1,
+  "best_epoch": 2,
+  "splits": {
+    "test": {
+      "pytorch": {
+        "n": 586,
+        "threshold": 0.5,
+        "accuracy": 0.9914675767918089,
+        "precision": 0.9574468085106383,
+        "recall": 0.989010989010989,
+        "f1": 0.972972972972973,
+        "roc_auc": 0.9950937950937951,
+        "confusion": {
+          "tn": 491,
+          "fp": 4,
+          "fn": 1,
+          "tp": 90
+        },
+        "fpr": 0.00808080808080808,
+        "ece": 0.011419346829424951,
+        "recall_by_scam_type": {
+          "account": {
+            "n": 5,
+            "recall": 1.0
+          },
+          "banking": {
+            "n": 5,
+            "recall": 1.0
+          },
+          "delivery": {
+            "n": 3,
+            "recall": 1.0
+          },
+          "prize": {
+            "n": 64,
+            "recall": 1.0
+          }
+        }
+      },
+      "pytorch_uncalibrated_ece": 0.009155724432840694,
+      "scam_type": {
+        "n": 77,
+        "accuracy": 0.8311688311688312,
+        "per_type": {
+          "delivery": {
+            "n": 3,
+            "acc": 0.0
+          },
+          "banking": {
+            "n": 5,
+            "acc": 0.8
+          },
+          "prize": {
+            "n": 64,
+            "acc": 0.9375
+          },
+          "account": {
+            "n": 5,
+            "acc": 0.0
+          }
+        }
+      },
+      "model_int8.onnx": {
+        "n": 586,
+        "threshold": 0.5,
+        "accuracy": 0.9914675767918089,
+        "precision": 0.9574468085106383,
+        "recall": 0.989010989010989,
+        "f1": 0.972972972972973,
+        "roc_auc": 0.9957375957375957,
+        "confusion": {
+          "tn": 491,
+          "fp": 4,
+          "fn": 1,
+          "tp": 90
+        },
+        "fpr": 0.00808080808080808,
+        "ece": 0.012049363775070723,
+        "recall_by_scam_type": {
+          "account": {
+            "n": 5,
+            "recall": 1.0
+          },
+          "banking": {
+            "n": 5,
+            "recall": 1.0
+          },
+          "delivery": {
+            "n": 3,
+            "recall": 1.0
+          },
+          "prize": {
+            "n": 64,
+            "recall": 1.0
+          }
+        },
+        "scam_type": {
+          "n": 77,
+          "accuracy": 0.8311688311688312,
+          "per_type": {
+            "delivery": {
+              "n": 3,
+              "acc": 0.0
+            },
+            "banking": {
+              "n": 5,
+              "acc": 0.8
+            },
+            "prize": {
+              "n": 64,
+              "acc": 0.9375
+            },
+            "account": {
+              "n": 5,
+              "acc": 0.0
+            }
+          }
+        }
+      },
+      "model.onnx": {
+        "n": 586,
+        "threshold": 0.5,
+        "accuracy": 0.9914675767918089,
+        "precision": 0.9574468085106383,
+        "recall": 0.989010989010989,
+        "f1": 0.972972972972973,
+        "roc_auc": 0.9950937950937951,
+        "confusion": {
+          "tn": 491,
+          "fp": 4,
+          "fn": 1,
+          "tp": 90
+        },
+        "fpr": 0.00808080808080808,
+        "ece": 0.011419348015033554,
+        "recall_by_scam_type": {
+          "account": {
+            "n": 5,
+            "recall": 1.0
+          },
+          "banking": {
+            "n": 5,
+            "recall": 1.0
+          },
+          "delivery": {
+            "n": 3,
+            "recall": 1.0
+          },
+          "prize": {
+            "n": 64,
+            "recall": 1.0
+          }
+        },
+        "scam_type": {
+          "n": 77,
+          "accuracy": 0.8311688311688312,
+          "per_type": {
+            "delivery": {
+              "n": 3,
+              "acc": 0.0
+            },
+            "banking": {
+              "n": 5,
+              "acc": 0.8
+            },
+            "prize": {
+              "n": 64,
+              "acc": 0.9375
+            },
+            "account": {
+              "n": 5,
+              "acc": 0.0
+            }
+          }
+        }
+      }
+    },
+    "holdout": {
+      "pytorch": {
+        "n": 300,
+        "threshold": 0.5,
+        "accuracy": 0.9733333333333334,
+        "precision": 0.967391304347826,
+        "recall": 0.9888888888888889,
+        "f1": 0.978021978021978,
+        "roc_auc": 0.9896296296296296,
+        "confusion": {
+          "tn": 114,
+          "fp": 6,
+          "fn": 2,
+          "tp": 178
+        },
+        "fpr": 0.05,
+        "ece": 0.011106241196393984,
+        "hard_negative_fpr": {
+          "bank": {
+            "n": 15,
+            "fp": 0,
+            "fpr": 0.0
+          },
+          "delivery": {
+            "n": 26,
+            "fp": 1,
+            "fpr": 0.038461538461538464
+          },
+          "otp": {
+            "n": 25,
+            "fp": 0,
+            "fpr": 0.0
+          },
+          "personal": {
+            "n": 20,
+            "fp": 3,
+            "fpr": 0.15
+          },
+          "reminder": {
+            "n": 15,
+            "fp": 0,
+            "fpr": 0.0
+          },
+          "service": {
+            "n": 20,
+            "fp": 2,
+            "fpr": 0.1
+          }
+        },
+        "recall_by_scam_type": {
+          "account": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "banking": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "delivery": {
+            "n": 30,
+            "recall": 0.9666666666666667
+          },
+          "government": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "impersonation": {
+            "n": 30,
+            "recall": 0.9666666666666667
+          },
+          "prize": {
+            "n": 30,
+            "recall": 1.0
+          }
+        }
+      },
+      "pytorch_uncalibrated_ece": 0.009118225810428435,
+      "scam_type": {
+        "n": 180,
+        "accuracy": 0.6611111111111111,
+        "per_type": {
+          "delivery": {
+            "n": 30,
+            "acc": 0.4666666666666667
+          },
+          "banking": {
+            "n": 30,
+            "acc": 0.8333333333333334
+          },
+          "prize": {
+            "n": 30,
+            "acc": 0.8666666666666667
+          },
+          "impersonation": {
+            "n": 30,
+            "acc": 0.9
+          },
+          "government": {
+            "n": 30,
+            "acc": 0.6333333333333333
+          },
+          "account": {
+            "n": 30,
+            "acc": 0.26666666666666666
+          }
+        }
+      },
+      "model_int8.onnx": {
+        "n": 300,
+        "threshold": 0.5,
+        "accuracy": 0.9766666666666667,
+        "precision": 0.9675675675675676,
+        "recall": 0.9944444444444445,
+        "f1": 0.9808219178082191,
+        "roc_auc": 0.9857407407407408,
+        "confusion": {
+          "tn": 114,
+          "fp": 6,
+          "fn": 1,
+          "tp": 179
+        },
+        "fpr": 0.05,
+        "ece": 0.01572960808873179,
+        "hard_negative_fpr": {
+          "bank": {
+            "n": 15,
+            "fp": 0,
+            "fpr": 0.0
+          },
+          "delivery": {
+            "n": 26,
+            "fp": 1,
+            "fpr": 0.038461538461538464
+          },
+          "otp": {
+            "n": 25,
+            "fp": 0,
+            "fpr": 0.0
+          },
+          "personal": {
+            "n": 20,
+            "fp": 3,
+            "fpr": 0.15
+          },
+          "reminder": {
+            "n": 15,
+            "fp": 0,
+            "fpr": 0.0
+          },
+          "service": {
+            "n": 20,
+            "fp": 2,
+            "fpr": 0.1
+          }
+        },
+        "recall_by_scam_type": {
+          "account": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "banking": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "delivery": {
+            "n": 30,
+            "recall": 0.9666666666666667
+          },
+          "government": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "impersonation": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "prize": {
+            "n": 30,
+            "recall": 1.0
+          }
+        },
+        "scam_type": {
+          "n": 180,
+          "accuracy": 0.6611111111111111,
+          "per_type": {
+            "delivery": {
+              "n": 30,
+              "acc": 0.4666666666666667
+            },
+            "banking": {
+              "n": 30,
+              "acc": 0.8666666666666667
+            },
+            "prize": {
+              "n": 30,
+              "acc": 0.8666666666666667
+            },
+            "impersonation": {
+              "n": 30,
+              "acc": 0.9
+            },
+            "government": {
+              "n": 30,
+              "acc": 0.6
+            },
+            "account": {
+              "n": 30,
+              "acc": 0.26666666666666666
+            }
+          }
+        }
+      },
+      "model.onnx": {
+        "n": 300,
+        "threshold": 0.5,
+        "accuracy": 0.9733333333333334,
+        "precision": 0.967391304347826,
+        "recall": 0.9888888888888889,
+        "f1": 0.978021978021978,
+        "roc_auc": 0.9896296296296296,
+        "confusion": {
+          "tn": 114,
+          "fp": 6,
+          "fn": 2,
+          "tp": 178
+        },
+        "fpr": 0.05,
+        "ece": 0.011106240004301087,
+        "hard_negative_fpr": {
+          "bank": {
+            "n": 15,
+            "fp": 0,
+            "fpr": 0.0
+          },
+          "delivery": {
+            "n": 26,
+            "fp": 1,
+            "fpr": 0.038461538461538464
+          },
+          "otp": {
+            "n": 25,
+            "fp": 0,
+            "fpr": 0.0
+          },
+          "personal": {
+            "n": 20,
+            "fp": 3,
+            "fpr": 0.15
+          },
+          "reminder": {
+            "n": 15,
+            "fp": 0,
+            "fpr": 0.0
+          },
+          "service": {
+            "n": 20,
+            "fp": 2,
+            "fpr": 0.1
+          }
+        },
+        "recall_by_scam_type": {
+          "account": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "banking": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "delivery": {
+            "n": 30,
+            "recall": 0.9666666666666667
+          },
+          "government": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "impersonation": {
+            "n": 30,
+            "recall": 0.9666666666666667
+          },
+          "prize": {
+            "n": 30,
+            "recall": 1.0
+          }
+        },
+        "scam_type": {
+          "n": 180,
+          "accuracy": 0.6611111111111111,
+          "per_type": {
+            "delivery": {
+              "n": 30,
+              "acc": 0.4666666666666667
+            },
+            "banking": {
+              "n": 30,
+              "acc": 0.8333333333333334
+            },
+            "prize": {
+              "n": 30,
+              "acc": 0.8666666666666667
+            },
+            "impersonation": {
+              "n": 30,
+              "acc": 0.9
+            },
+            "government": {
+              "n": 30,
+              "acc": 0.6333333333333333
+            },
+            "account": {
+              "n": 30,
+              "acc": 0.26666666666666666
+            }
+          }
+        }
+      }
+    }
+  },
+  "sizes_mb": {
+    "model_int8.onnx": 34.0,
+    "model.onnx": 133.1
+  },
+  "latency": {
+    "int8_cpu_1thread": {
+      "n": 200,
+      "p50_ms": 6.989755900576711,
+      "p95_ms": 8.72940848348662,
+      "note": "onnxruntime CPU, intra_op_threads=1, single message, no batching"
+    }
+  }
+}

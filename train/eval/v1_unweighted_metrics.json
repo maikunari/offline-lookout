@@ -1,0 +1,177 @@
+{
+  "tag": "v1_unweighted",
+  "base_model": "microsoft/MiniLM-L12-H384-uncased",
+  "parameters": 33215625,
+  "temperature": 1.1,
+  "best_epoch": 2,
+  "splits": {
+    "test": {
+      "pytorch": {
+        "n": 586,
+        "threshold": 0.5,
+        "accuracy": 0.9829351535836177,
+        "precision": 0.9175257731958762,
+        "recall": 0.978021978021978,
+        "f1": 0.9468085106382979,
+        "roc_auc": 0.9902097902097903,
+        "confusion": {
+          "tn": 487,
+          "fp": 8,
+          "fn": 2,
+          "tp": 89
+        },
+        "fpr": 0.01616161616161616,
+        "ece": 0.01753831441504658,
+        "recall_by_scam_type": {
+          "account": {
+            "n": 5,
+            "recall": 1.0
+          },
+          "banking": {
+            "n": 5,
+            "recall": 1.0
+          },
+          "delivery": {
+            "n": 3,
+            "recall": 1.0
+          },
+          "prize": {
+            "n": 64,
+            "recall": 1.0
+          }
+        }
+      },
+      "pytorch_uncalibrated_ece": 0.014842198721416063,
+      "scam_type": {
+        "n": 77,
+        "accuracy": 0.8701298701298701,
+        "per_type": {
+          "delivery": {
+            "n": 3,
+            "acc": 0.0
+          },
+          "banking": {
+            "n": 5,
+            "acc": 0.6
+          },
+          "prize": {
+            "n": 64,
+            "acc": 1.0
+          },
+          "account": {
+            "n": 5,
+            "acc": 0.0
+          }
+        }
+      }
+    },
+    "holdout": {
+      "pytorch": {
+        "n": 300,
+        "threshold": 0.5,
+        "accuracy": 0.7766666666666666,
+        "precision": 0.7467248908296943,
+        "recall": 0.95,
+        "f1": 0.8361858190709046,
+        "roc_auc": 0.8506018518518519,
+        "confusion": {
+          "tn": 62,
+          "fp": 58,
+          "fn": 9,
+          "tp": 171
+        },
+        "fpr": 0.48333333333333334,
+        "ece": 0.18216523113350072,
+        "hard_negative_fpr": {
+          "bank": {
+            "n": 15,
+            "fp": 4,
+            "fpr": 0.26666666666666666
+          },
+          "delivery": {
+            "n": 26,
+            "fp": 11,
+            "fpr": 0.4230769230769231
+          },
+          "otp": {
+            "n": 25,
+            "fp": 17,
+            "fpr": 0.68
+          },
+          "personal": {
+            "n": 20,
+            "fp": 5,
+            "fpr": 0.25
+          },
+          "reminder": {
+            "n": 15,
+            "fp": 8,
+            "fpr": 0.5333333333333333
+          },
+          "service": {
+            "n": 20,
+            "fp": 14,
+            "fpr": 0.7
+          }
+        },
+        "recall_by_scam_type": {
+          "account": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "banking": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "delivery": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "government": {
+            "n": 30,
+            "recall": 1.0
+          },
+          "impersonation": {
+            "n": 30,
+            "recall": 0.7
+          },
+          "prize": {
+            "n": 30,
+            "recall": 1.0
+          }
+        }
+      },
+      "pytorch_uncalibrated_ece": 0.18878514679769673,
+      "scam_type": {
+        "n": 180,
+        "accuracy": 0.3,
+        "per_type": {
+          "delivery": {
+            "n": 30,
+            "acc": 0.0
+          },
+          "banking": {
+            "n": 30,
+            "acc": 0.8333333333333334
+          },
+          "prize": {
+            "n": 30,
+            "acc": 0.9666666666666667
+          },
+          "impersonation": {
+            "n": 30,
+            "acc": 0.0
+          },
+          "government": {
+            "n": 30,
+            "acc": 0.0
+          },
+          "account": {
+            "n": 30,
+            "acc": 0.0
+          }
+        }
+      }
+    }
+  }
+}
