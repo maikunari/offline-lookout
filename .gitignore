@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Data and checkpoints (downloaded / generated, not committed)
+train/data/raw/
+train/data/processed/
+train/checkpoints/
+train/runs/
+train/export/tmp/
+
+# Node
+node_modules/
+web/dist/
+web/.vite/
+
+# OS / editor
+.DS_Store
+*.swp
