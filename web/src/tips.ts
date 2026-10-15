@@ -1,4 +1,4 @@
-import type { ScamType } from "./model";
+import type { Prediction, ScamType } from "./model";
 
 export const TYPE_LABEL: Record<ScamType, string> = {
   none: "Not a scam",
@@ -69,4 +69,15 @@ export function resolveType(text: string, modelType: ScamType, modelConf: number
   if (modelConf >= 0.6) return { type: modelType, hinted: false };
   for (const [t, rx] of TYPE_HINTS) if (rx.test(text)) return { type: t, hinted: t !== modelType };
   return { type: modelType, hinted: false };
+}
+
+/**
+ * The one place a prediction becomes a verdict and a type label. The single check
+ * and the batch table both call this, so they cannot disagree about a message.
+ */
+export function classify(text: string, pred: Prediction): { level: "green" | "yellow" | "red"; title: string; type: ScamType; hinted: boolean; typeConf: number } {
+  const v = verdictFor(pred.pScam);
+  if (v.level === "green") return { ...v, type: "none", hinted: false, typeConf: 0 };
+  const rt = resolveType(text, pred.topType, pred.typeProbs[pred.topType]);
+  return { ...v, type: rt.type, hinted: rt.hinted, typeConf: pred.typeProbs[rt.type] };
 }

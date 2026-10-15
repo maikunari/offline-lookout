@@ -9,6 +9,7 @@
 import * as ort from "onnxruntime-web/wasm";
 import ortWasmUrl from "onnxruntime-web/ort-wasm-simd-threaded.wasm?url";
 import { WordPieceTokenizer } from "./tokenizer";
+import { decodePredictions } from "./predict";
 
 export type ScamType = "none" | "delivery" | "banking" | "prize" | "impersonation" | "government" | "account";
 
@@ -41,13 +42,6 @@ const BASE = import.meta.env.BASE_URL;
 /** Byte sizes of the three big assets, injected by vite.config.ts from the files on disk. */
 export const ASSET_BYTES = __ASSET_BYTES__;
 export const TOTAL_BYTES = ASSET_BYTES.wasm + ASSET_BYTES.model + ASSET_BYTES.vocab;
-
-function softmax(x: Float32Array | number[]): number[] {
-  const m = Math.max(...x);
-  const e = Array.from(x, (v) => Math.exp(v - m));
-  const s = e.reduce((a, b) => a + b, 0);
-  return e.map((v) => v / s);
-}
 
 /** fetch() that reports every chunk as it arrives, so progress is real bytes, not a timer. */
 async function fetchBytes(url: string, onChunk: (n: number) => void): Promise<Uint8Array> {
@@ -138,26 +132,8 @@ export class ScamModel {
     const out = await this.session.run(feeds);
     const logits = out.logits.data as Float32Array;
     const tlogits = out.type_logits.data as Float32Array;
-    const T = this.meta.temperature;
-    const types = this.meta.scam_types;
     const ms = performance.now() - t0;
-    const res: Prediction[] = [];
-    for (let i = 0; i < n; i++) {
-      const b = softmax([logits[i * 2] / T, logits[i * 2 + 1] / T]);
-      const tp = softmax(tlogits.subarray(i * types.length, (i + 1) * types.length));
-      const typeProbs = {} as Record<ScamType, number>;
-      let best: ScamType = "delivery";
-      let bestP = -1;
-      types.forEach((t, k) => {
-        typeProbs[t] = tp[k];
-        if (t !== "none" && tp[k] > bestP) {
-          bestP = tp[k];
-          best = t;
-        }
-      });
-      res.push({ pScam: b[1], typeProbs, topType: best, ms });
-    }
-    return res;
+    return decodePredictions(logits, tlogits, n, this.meta, ms);
   }
 
   async predict(text: string): Promise<Prediction> {

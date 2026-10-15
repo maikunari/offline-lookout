@@ -3,15 +3,9 @@ import { registerSW } from "virtual:pwa-register";
 import { ScamModel, TOTAL_BYTES, type LoadProgress, type Prediction, type ScamType } from "./model";
 import { explain, type WordAttribution } from "./explain";
 import { detectChips, type Chip } from "./rules";
-import { TIPS, TYPE_LABEL, resolveType, verdictFor } from "./tips";
+import { TIPS, TYPE_LABEL, classify, verdictFor } from "./tips";
+import { SAMPLES } from "./samples";
 import { NetWatch } from "./netwatch";
-
-const SAMPLES: Record<string, string> = {
-  parcel: "PostLink: your parcel could not be delivered due to an unpaid customs fee of $2.99. Pay now to avoid return: https://postlink-redeliver.example/p/48213",
-  otp: "Your verification code is 482913. It expires in 10 minutes. Do not share this code with anyone.",
-  mum: "Hi mum, I dropped my phone in the sink and this is my new number. Can you save it and message me back? x",
-  bank: "Nordbank: 42.00 paid to GROCERY CO using card ending 4412. Balance available in the app.",
-};
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 const LOGO = `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><clipPath id="lg-t"><rect width="64" height="64" rx="14"/></clipPath></defs><rect width="64" height="64" rx="14" fill="#0a0d13"/><g clip-path="url(#lg-t)"><path d="M18 46 L70 -10 L86 22 Z" fill="#ffc857"/><path d="M33 29.9 A22 22 0 0 1 38.7 38.7" fill="none" stroke="#0a0d13" stroke-width="2.4" stroke-linecap="round"/><path d="M41.1 21.1 A34 34 0 0 1 50.1 34.7" fill="none" stroke="#0a0d13" stroke-width="2.4" stroke-linecap="round"/></g><circle cx="18" cy="46" r="7" fill="#f2f4f8"/><circle cx="18" cy="46" r="2.6" fill="#0a0d13"/></svg>`;
@@ -380,19 +374,10 @@ async function run() {
   try {
     const pred = await model.predict(text);
     lastRun = { text, pred };
-    const v = verdictFor(pred.pScam);
+    const { type, hinted, typeConf, ...v } = classify(text, pred);
     const level = LEVEL_CLASS[v.level];
     const safe = v.level === "green";
     const chips = detectChips(text);
-    let type: ScamType = "none";
-    let typeConf = 0;
-    let hinted = false;
-    if (!safe) {
-      const rt = resolveType(text, pred.topType, pred.typeProbs[pred.topType]);
-      type = rt.type;
-      hinted = rt.hinted;
-      typeConf = pred.typeProbs[type];
-    }
     const tips = TIPS[type];
     $("#lat").textContent = `last inference ${pred.ms.toFixed(0)} ms`;
 
@@ -526,7 +511,7 @@ $("#batchrun").addEventListener("click", async () => {
   batchRows = [];
   for (let i = 0; i < lines.length; i += 16) {
     const preds = await model.predictBatch(lines.slice(i, i + 16));
-    preds.forEach((p, k) => batchRows.push({ text: lines[i + k], p: p.pScam, type: verdictFor(p.pScam).level === "green" ? "none" : p.topType }));
+    preds.forEach((p, k) => batchRows.push({ text: lines[i + k], p: p.pScam, type: classify(lines[i + k], p).type }));
   }
   batchRows.sort((a, b) => b.p - a.p);
   const flagged = batchRows.filter((r) => r.p >= 0.35).length;
