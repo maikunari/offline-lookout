@@ -13,6 +13,8 @@ works with the network switched off.
 
 This is a submission to the **Ryze AI Hack: Small Models** (https://open-ryze.web.app/).
 
+**Demo video (2 min):** https://youtu.be/T-4w0h66ZnQ
+
 ![Demo: parcel-fee scam goes red, OTP goes green, "hi mum" goes red](docs/demo.gif)
 
 <p>
