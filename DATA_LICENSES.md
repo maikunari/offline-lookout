@@ -72,8 +72,19 @@ the source before use. Nothing here requires a login to obtain.
 - **License:** MIT. Derived from the MIT-licensed base model and the CC BY 4.0
   datasets above; attribution for those datasets is given here and in the README.
 
+### Tesseract English LSTM model (screenshot reader)
+
+- **Source:** `eng.traineddata` from the Tesseract `tessdata_best` integer
+  models (`4.0.0_best_int`), as packaged by `@tesseract.js-data/eng` 1.0.0
+  (https://github.com/naptha/tessdata).
+- **License:** Apache-2.0 (tessdata); the npm package is MIT.
+- **Size:** 2.95 MB gzipped; the LSTM network inside is 1.49 MB of int8
+  weights, so under 1.5M parameters.
+- **Use here:** unchanged; self-hosted at `ocr/eng.traineddata.gz` and run with
+  Tesseract.js in the browser to read screenshots of messages.
+
 ## Runtime libraries (not data, listed for completeness)
 
-- onnxruntime-web (MIT), Vite (MIT), vite-plugin-pwa / Workbox (MIT),
+- onnxruntime-web (MIT), Tesseract.js and tesseract.js-core (Apache-2.0), Vite (MIT), vite-plugin-pwa / Workbox (MIT),
   PyTorch (BSD-3), Hugging Face Transformers and Optimum (Apache-2.0),
   scikit-learn (BSD-3).

@@ -6,6 +6,7 @@ import { detectChips, type Chip } from "./rules";
 import { TIPS, TYPE_LABEL, classify, verdictFor } from "./tips";
 import { SAMPLES } from "./samples";
 import { NetWatch } from "./netwatch";
+import { wireImageInput } from "./imageinput";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 const LOGO = `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><clipPath id="lg-t"><rect width="64" height="64" rx="14"/></clipPath></defs><rect width="64" height="64" rx="14" fill="#0a0d13"/><g clip-path="url(#lg-t)"><path d="M18 46 L70 -10 L86 22 Z" fill="#ffc857"/><path d="M33 29.9 A22 22 0 0 1 38.7 38.7" fill="none" stroke="#0a0d13" stroke-width="2.4" stroke-linecap="round"/><path d="M41.1 21.1 A34 34 0 0 1 50.1 34.7" fill="none" stroke="#0a0d13" stroke-width="2.4" stroke-linecap="round"/></g><circle cx="18" cy="46" r="7" fill="#f2f4f8"/><circle cx="18" cy="46" r="2.6" fill="#0a0d13"/></svg>`;
@@ -24,6 +25,8 @@ const HERO_ART = `<svg class="hero-art" viewBox="0 0 132 120" aria-hidden="true"
   <rect x="42" y="60" width="48" height="7" rx="3.5" fill="#ff5d5d" opacity="0.6"/>
   <circle cx="18" cy="102" r="9" fill="#f2f4f8"/><circle cx="18" cy="102" r="3.4" fill="#0a0d13"/>
 </svg>`;
+
+const SHOT_ICON = `<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="1" width="8" height="12" rx="1.5"/><path d="M5.5 4.5h3M5.5 7h3M5.5 9.5h2"/></svg>`;
 
 /** A static example verdict shown before the first check, so the page never opens on a bare form. */
 const GHOST = `
@@ -69,12 +72,18 @@ app.innerHTML = `
     </div>
 
     <section class="compose" aria-labelledby="msg-label">
-      <label for="msg" id="msg-label" class="field-label">Message to check</label>
-      <textarea id="msg" rows="4" placeholder="Paste a text message here…" spellcheck="false"></textarea>
+      <div class="field-row">
+        <label for="msg" id="msg-label" class="field-label">Message to check</label>
+        <button id="shotbtn" class="quiet small shot" aria-describedby="shothint">${SHOT_ICON}<span id="shotlbl">Use a screenshot</span></button>
+        <input id="shot" type="file" accept="image/*" class="sr-only" tabindex="-1" aria-hidden="true" />
+      </div>
+      <textarea id="msg" rows="4" placeholder="Paste a text message here, or drop a screenshot…" spellcheck="false"></textarea>
       <div class="actions">
         <button id="check" class="action" disabled><span class="spin" aria-hidden="true"></span><span id="checklbl">Check message</span></button>
         <button id="clear" class="quiet">Clear</button>
       </div>
+      <p id="shothint" class="sr-only">Pick an image, drop one on the page, or paste one. Its text is read on this device and put in the message box.</p>
+      <p id="ocrnote" class="note" hidden></p>
       <p id="err" class="err" hidden></p>
       <div class="samples"><span class="samples-l">Try one</span>
         <button class="bubble-btn" data-sample="parcel">Parcel fee</button>
@@ -112,6 +121,7 @@ app.innerHTML = `
         <ul>
           <li><strong>Verdict.</strong> A small MiniLM text classifier, fine-tuned on scam and legitimate texts, quantised to int8 and run with onnxruntime-web (WebAssembly) inside this tab. The probability is temperature-calibrated; the two thresholds printed on the strip (35 suspicious, 70 scam) are the real ones.</li>
           <li><strong>Highlights.</strong> An occlusion test: each word and short span is removed in turn and the message re-scored. Words whose removal moves the verdict most are marked red (toward scam) or green (toward safe).</li>
+          <li><strong>Screenshots.</strong> Pick, drop or paste an image of a text and Tesseract.js reads it inside this tab (an LSTM text recogniser compiled to WebAssembly, English only). Status-bar and timestamp noise is dropped and the text lands in the message box for you to check. The reader loads only when you first use it, from this device's cache.</li>
           <li><strong>Rule chips.</strong> Plain regular expressions for links, lookalike domains, money, urgency and requests for codes or details. They are evidence, not AI, and never change the score.</li>
           <li><strong>Privacy.</strong> After the model is ready the header counter watches every fetch, XHR and resource load. It should stay at zero: nothing you paste is sent anywhere.</li>
         </ul>
@@ -355,6 +365,7 @@ async function run() {
   if (!text || !model.ready || running) return;
   setBusy(true, "Checking…");
   errEl.hidden = true;
+  ocrNote.hidden = true;
   statusEl.textContent = "Analysing on device…";
   ghostEl.classList.add("hidden");
   loaderEl.classList.add("hidden");
@@ -436,6 +447,7 @@ msgEl.addEventListener("keydown", (e) => {
 });
 $("#clear").addEventListener("click", () => {
   msgEl.value = "";
+  ocrNote.hidden = true;
   resultEl.classList.add("hidden");
   ghostEl.classList.remove("hidden");
   errEl.hidden = true;
@@ -447,6 +459,62 @@ document.querySelectorAll<HTMLButtonElement>("[data-sample]").forEach((b) =>
     void run();
   }),
 );
+
+// ---- Screenshot check: picker, drop or paste an image; its text is read on device ----
+const shotBtn = $<HTMLButtonElement>("#shotbtn");
+const shotLbl = $("#shotlbl");
+const shotInput = $<HTMLInputElement>("#shot");
+const ocrNote = $("#ocrnote");
+let reading = false;
+
+function note(text: string) {
+  ocrNote.textContent = text;
+  ocrNote.hidden = false;
+}
+
+async function readImage(file: File) {
+  if (reading) return;
+  reading = true;
+  errEl.hidden = true;
+  shotBtn.disabled = true;
+  shotLbl.textContent = "Reading…";
+  note("Starting the on-device text reader…");
+  statusEl.textContent = "Reading the screenshot on device…";
+  try {
+    // Loaded on first use only, so the first visit stays as fast as before.
+    const { readScreenshot } = await import("./ocr");
+    const text = await readScreenshot(file, (p) => {
+      if (p.stage === "reading") note(`Reading the screenshot on this device… ${Math.round(p.progress * 100)}%`);
+    });
+    if (!text) {
+      ocrNote.hidden = true;
+      showError("No text found in that image. Try a sharper screenshot, or paste the text instead.");
+      return;
+    }
+    msgEl.value = text;
+    note("Text read from your screenshot on this device. Fix anything it misread, then check it.");
+    statusEl.textContent = "Text read from the screenshot and put in the message box. Review it, then check the message.";
+    msgEl.focus();
+  } catch (e) {
+    ocrNote.hidden = true;
+    showError(`Could not read that image: ${(e as Error).message}`);
+    console.error(e);
+  } finally {
+    reading = false;
+    shotBtn.disabled = false;
+    shotLbl.textContent = "Use a screenshot";
+    renderNet();
+  }
+}
+
+shotBtn.addEventListener("click", () => shotInput.click());
+wireImageInput({
+  root: document,
+  zone: $(".compose"),
+  picker: shotInput,
+  onImage: (f) => void readImage(f),
+  onReject: (f) => showError(`${f.name || "That file"} is not an image. Drop a screenshot (PNG, JPEG…) or paste the text.`),
+});
 
 // ---- Sticky Check on phones: a docked button appears once the inline one scrolls away ----
 const dock = $("#dock");

@@ -1,12 +1,14 @@
 /**
  * Live proof of offline operation: counts resources that actually hit the
- * network (transferSize > 0) and every fetch/XHR issued after the model is ready.
+ * network (transferSize > 0) and every fetch/XHR issued after the model is ready,
+ * plus any network load the OCR worker reports (public/ocr/lookout-worker.js).
  */
 export class NetWatch {
   private baseline = 0;
   private armed = false;
   private fetchCount = 0;
   private xhrCount = 0;
+  private workerCount = 0;
   private listeners: Array<() => void> = [];
 
   constructor() {
@@ -32,6 +34,15 @@ export class NetWatch {
     } catch {
       /* unsupported */
     }
+    try {
+      new BroadcastChannel("lookout-netwatch").onmessage = () => {
+        if (!this.armed) return;
+        this.workerCount++;
+        this.emit();
+      };
+    } catch {
+      /* unsupported */
+    }
     window.addEventListener("online", () => this.emit());
     window.addEventListener("offline", () => this.emit());
   }
@@ -50,7 +61,7 @@ export class NetWatch {
   }
 
   snapshot() {
-    const sinceArm = this.armed ? Math.max(0, this.networkResources() - this.baseline) + this.fetchCount + this.xhrCount : 0;
+    const sinceArm = this.armed ? Math.max(0, this.networkResources() - this.baseline) + this.fetchCount + this.xhrCount + this.workerCount : 0;
     return {
       armed: this.armed,
       requestsSinceReady: sinceArm,

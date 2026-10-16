@@ -1,0 +1,51 @@
+<!doctype html>
+<!--
+  Source of docs/sample-screenshot.png: a synthetic phone screenshot of a scam text for the
+  screenshot-check demo and the OCR test. Every name, number and domain is fictional.
+  Regenerate by opening this file in Chrome at 780x1240 and taking a full-page screenshot.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Sample screenshot</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 780px; height: 1240px; background: #fff; overflow: hidden; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #000; }
+  .status { display: flex; justify-content: space-between; align-items: center; padding: 22px 52px 0; font-size: 32px; font-weight: 600; height: 88px; }
+  .status .right { display: flex; gap: 14px; align-items: center; font-size: 28px; }
+  .bars { display: inline-flex; gap: 4px; align-items: flex-end; height: 24px; }
+  .bars i { display: block; width: 6px; background: #000; border-radius: 2px; }
+  .batt { display: inline-block; width: 50px; height: 24px; border: 2px solid #999; border-radius: 7px; padding: 2px; }
+  .batt i { display: block; height: 100%; width: 80%; background: #000; border-radius: 4px; }
+  .head { text-align: center; padding: 14px 0 22px; border-bottom: 1px solid #ddd; background: #f7f7f7; position: relative; }
+  .back { position: absolute; left: 26px; top: 40px; font-size: 56px; line-height: 1; color: #0a7cff; font-weight: 300; }
+  .avatar { width: 96px; height: 96px; border-radius: 50%; background: linear-gradient(#a5abb7, #858b97); margin: 0 auto 10px; }
+  .who { font-size: 24px; color: #222; }
+  .thread { padding: 30px 26px; }
+  .stamp { text-align: center; color: #8a8a8e; font-size: 22px; margin: 8px 0 22px; }
+  .stamp b { font-weight: 600; }
+  .bubble { max-width: 560px; background: #e9e9eb; border-radius: 36px; padding: 20px 28px; font-size: 32px; line-height: 1.32; margin-bottom: 12px; }
+  .bubble a { color: #0a64d6; text-decoration: underline; }
+  .compose { position: absolute; left: 0; right: 0; bottom: 34px; padding: 0 26px; display: flex; gap: 18px; align-items: center; }
+  .plus { width: 66px; height: 66px; border-radius: 50%; background: #e9e9eb; color: #8a8a8e; font-size: 44px; text-align: center; line-height: 64px; }
+  .field { flex: 1; height: 70px; border: 2px solid #d6d6d9; border-radius: 36px; color: #b4b4b8; font-size: 30px; padding: 16px 28px; }
+</style>
+</head>
+<body>
+  <div class="status">
+    <span>9:41</span>
+    <span class="right"><span class="bars"><i style="height:8px"></i><i style="height:13px"></i><i style="height:18px"></i><i style="height:24px"></i></span>LTE<span class="batt"><i></i></span></span>
+  </div>
+  <div class="head">
+    <span class="back">&lsaquo;</span>
+    <div class="avatar"></div>
+    <div class="who">+1 (555) 014-2297</div>
+  </div>
+  <div class="thread">
+    <p class="stamp"><b>Text Message</b><br />Today 10:24 AM</p>
+    <div class="bubble">PostLink: Your parcel is on hold due to an unpaid customs fee of $1.95. Pay within 24 hours to avoid return to sender: <a>postlink-parcels.example/track/7Q2K</a></div>
+  </div>
+  <div class="compose"><span class="plus">+</span><span class="field">Text Message</span></div>
+</body>
+</html>

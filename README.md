@@ -4,11 +4,12 @@ This project was submitted to the ryze.ai hackathon by Mike Sewell.
 
 # Offline Lookout
 
-**An on-device scam-text detector.** Paste a suspicious SMS or chat message and
-get a verdict (green / yellow / red with a calibrated probability), the type of
-scam, the words that drove the decision, and plain-language advice on what to
-do. Everything runs inside your browser. Nothing you paste ever leaves your
-device, and after the first visit the app works with the network switched off.
+**An on-device scam-text detector.** Paste a suspicious SMS or chat message (or
+drop in a screenshot of it) and get a verdict (green / yellow / red with a
+calibrated probability), the type of scam, the words that drove the decision,
+and plain-language advice on what to do. Everything runs inside your browser.
+Nothing you paste ever leaves your device, and after the first visit the app
+works with the network switched off.
 
 This is a submission to the **Ryze AI Hack: Small Models** (https://open-ryze.web.app/).
 
@@ -29,7 +30,11 @@ This is a submission to the **Ryze AI Hack: Small Models** (https://open-ryze.we
 | Export | ONNX opset 17 via PyTorch, dynamic **int8** (per-channel) with Hugging Face Optimum: **~34 MB** |
 | Runtime | [onnxruntime-web](https://onnxruntime.ai/) WebAssembly, single thread, in the browser. A built-in BERT WordPiece tokenizer (parity-tested against the Hugging Face tokenizer) feeds it. |
 | Calibration | temperature scaling fit on the validation split; the percentage shown is the calibrated probability |
-| Remote inference | **none**. No OpenAI, no Hugging Face Inference API, no server of ours. The only network traffic is the first download of the static app and model files, which the service worker then caches. The header badge counts network requests after the model is ready; it stays at 0. |
+| Remote inference | **none**. No OpenAI, no Hugging Face Inference API, no server of ours. The only network traffic is the first download of the static app and model files, which the service worker then caches. The header badge counts network requests after the model is ready; it stays at 0, including while a screenshot is read. |
+
+Total model parameters shipped: about **34.7 million** (the MiniLM above plus
+under 1.5 million in the screenshot reader's LSTM, below), far under the 500M
+limit.
 
 Fine-tuning is done on CPU in about 25 minutes with a fixed seed (42). See
 [`MODEL_CARD.md`](MODEL_CARD.md) for the full card.
@@ -54,6 +59,34 @@ Calibration ECE on modern holdout: 0.016. Confusion (tn/fp/fn/tp): 114/6/1/179.
 Latency (onnxruntime CPU, intra_op_threads=1, single message, no batching): p50 7.0 ms, p95 8.7 ms. Size: int8 ONNX 34.0 MB (fp32 133.1 MB, not shipped).
 <!-- EVAL:END -->
 
+## Input methods
+
+- **Type or paste** a message into the box (Ctrl/Cmd+Enter checks it).
+- **A screenshot of the message.** Three ways in: the **Use a screenshot**
+  button (a file picker for images; on iPhone and Android it offers the photo
+  library), **drag and drop** an image anywhere on the page, or **paste an
+  image** with Ctrl/Cmd+V. The text is read on the device, cleaned up and put
+  in the message box so you can fix any misread word before pressing Check.
+- **Share from another app** (Android): share a text from Messages to Lookout
+  and it is checked straight away. Shared images are not handled; use a
+  screenshot instead.
+- **Many at once:** paste a chat export or upload a `.txt` under "Check many
+  messages at once".
+
+`docs/sample-screenshot.png` is a synthetic screenshot (fictional number and
+domain) for trying the screenshot check.
+
+## Screenshot reader (OCR)
+
+| | |
+|---|---|
+| Library | [Tesseract.js](https://github.com/naptha/tesseract.js) **7.0.0** (Apache-2.0), with tesseract.js-core 7.0.0: Tesseract compiled to WebAssembly |
+| Engine | LSTM only (`OEM.LSTM_ONLY`), SIMD build, English `eng.traineddata` from `@tesseract.js-data/eng` (`4.0.0_best_int`, Apache-2.0 tessdata) |
+| Parameters | under **1.5 million**: the int8 LSTM network inside the traineddata is 1.49 MB |
+| Size | **6.0 MB** added to the offline cache: wasm core 2.86 MB + its loader 0.09 MB, worker 0.11 MB, traineddata 2.95 MB (gzipped), plus about 22 kB of app and library JavaScript |
+| Loading | self-hosted under `ocr/` next to the app (never a CDN). The service worker caches it in the background with the rest of the offline files; the page only loads and starts it when you supply the first image, so it is not on the path to "Ready". Reading a phone screenshot, including starting the reader, takes under a second on a laptop. |
+| Cleanup | drops the status bar (clock, carrier, battery), the contact header, lone timestamps and receipts ("Today 10:24 AM", "Delivered"), app labels ("Text Message") and stray icon glyphs, and rejoins lines a bubble wrapped. See `web/src/ocrclean.ts`. |
+
 ## How it works
 
 1. **Classifier.** MiniLM encodes the message; the `[CLS]` vector feeds two
@@ -74,8 +107,10 @@ Latency (onnxruntime CPU, intra_op_threads=1, single message, no batching): p50 
    to the model.
 4. **What to do.** A static tip set per scam type.
 5. **Offline proof.** A Workbox service worker precaches the app, the int8
-   model and the wasm runtime. The badge in the header counts resources that
-   hit the network and every `fetch`/XHR after the model is ready.
+   model, the wasm runtime and the screenshot reader. The badge in the header
+   counts resources that hit the network and every `fetch`/XHR after the model
+   is ready, plus any load the screenshot reader's worker makes that reaches
+   the network.
 6. **Extras.** Android Web Share Target (share a text from Messages straight
    into the app), batch check of a pasted chat export with CSV download, and a
    local-only feedback log you can export as JSON. Nothing is uploaded.
@@ -112,7 +147,8 @@ train/            data pipeline, fine-tuning, export, evaluation (Python)
 train/templates/  hand-written modern scams + hard negatives (fictional)
 train/eval/       metrics JSON and the rendered EVAL.md table
 web/              Vite + TypeScript PWA (src/model.ts = inference, explain.ts = occlusion,
-                  rules.ts = chips, tokenizer.ts = WordPiece, netwatch.ts = badge)
+                  rules.ts = chips, tokenizer.ts = WordPiece, netwatch.ts = badge,
+                  ocr.ts + ocrclean.ts + imageinput.ts = screenshot check)
 web/public/model/ model_int8.onnx, vocab.txt, model_meta.json
 MODEL_CARD.md     model card
 DATA_LICENSES.md  every dataset and model license, verified at source
@@ -135,7 +171,11 @@ Full details, citations and the changes made to each dataset are in
 
 ## Limitations
 
-- English only. A multilingual model is the obvious next step.
+- English only, for the classifier and the screenshot reader. A multilingual
+  model is the obvious next step.
+- The screenshot reader needs WebAssembly SIMD (every current browser has it).
+  Busy or low-resolution screenshots can be misread, which is why the text is
+  shown for editing before the check.
 - Trained mostly on 2011-era SMS; the modern hand-written sets are small. The
   eval table shows exactly how far the model generalises and where it fails.
 - Verdicts can be wrong in both directions. The app says so, and the advice is
